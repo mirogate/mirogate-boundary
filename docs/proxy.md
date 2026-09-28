@@ -78,6 +78,24 @@ and never pass it to tools or execute it without a separate authorization layer.
 
 ## Python API
 
+For a live-provider example, configure the local process environment (not a checked-in
+file). Generate `BOUNDARY_LOCAL_TOKEN` with `boundary token`; set the separate
+`BOUNDARY_UPSTREAM_KEY` to your own provider credential. Start the server with the
+explicit endpoint in README.md. In another terminal, set the same local token and
+`BOUNDARY_MODEL` to a model identifier supported by your provider, then run:
+
+```sh
+python examples/client.py
+```
+
+Unlike `examples/capture_demo.py`, this sends the transformed synthetic prompt to
+your configured provider and may incur provider charges. It has not been validated
+against a paid provider endpoint in this release; compatibility is tested against
+the documented request/response subset with local capture servers. No provider key
+is required for the capture demo, unit tests or synthetic local-model evaluation.
+
+For embedding:
+
 ```python
 from mirogate_boundary.proxy import serve
 

@@ -88,6 +88,13 @@ by OpenAI.
 
 ## Local Windows verification record — 2026-09-28
 
+For the separately verified Linux environment and all 99 actual model-backed cases,
+see [the measured comparison](evaluation.md#local-model-comparison) and the
+[manual workflow with pinned dependencies](../.github/workflows/model-evaluation.yml).
+That run used Python 3.11.13 and the official CPU-only PyTorch 2.8.0 wheel. The
+generic installation recipe above may resolve newer dependencies; use the workflow's
+exact dependency versions to reproduce the published run.
+
 On the development host (Windows, Python 3.13, 8 GB RAM, Intel integrated graphics),
 the pinned OPF package and dependencies installed in a dedicated `.venv`. The
 2,798,984,088-byte model and configuration/calibration/tokenizer artifacts downloaded

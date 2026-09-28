@@ -74,6 +74,8 @@ boundary scan --detector hybrid --checkpoint checkpoints/privacy-filter --file e
 
 See the [evaluation report](docs/evaluation.md) for which execution paths were actually measured. Adapter tests alone are not model accuracy results.
 
+Actual Linux CPU evaluation is published for all 99 synthetic cases. Hybrid strict entity recall was 81.11% and annotated-character coverage 93.11%, with **seven sensitive cases still incompletely covered and four of 18 negative controls flagged**. This small, AI-authored development set is not held out or representative. Read the full precision/recall and false-positive results before quoting these figures. Windows Application Control blocked model execution on our development host; its security policy was left unchanged.
+
 ## Python API
 
 ```python

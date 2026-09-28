@@ -31,7 +31,34 @@ The ten `secrets` cases had 6 / 10 strict matches and 254 / 355 sensitive charac
 
 ## Local model comparison
 
-At the time this initial report was authored, the OpenAI Privacy Filter and hybrid comparisons were still pending. This file must be updated only after actual model inference finishes, with checkpoint revision/runtime metadata and raw reports. The rules-only figures above must never be described as Privacy Filter results. There are no fabricated or inferred model scores in this report.
+Actual OPF and hybrid inference completed on 2026-09-28 in a Linux GitHub Actions CPU runner: [verified run](https://github.com/mirogate/mirogate-boundary/actions/runs/36476642007), source commit `0c0bb1b82d9a46264c3f17400272bdab0d3ae0ae`. Both modes processed all 99 cases with fresh predictions. The same loaded model was used in OPF-then-hybrid order; predictions were not cached. Raw reports: [OPF](../benchmarks/results/opf-v0.1.json), [hybrid](../benchmarks/results/hybrid-v0.1.json).
+
+| Metric, same synthetic corpus | Rules | OPF alone | Hybrid |
+| --- | ---: | ---: | ---: |
+| Strict entity precision | 82.26% | 69.62% | 67.59% |
+| Strict entity recall | 56.67% | 61.11% | 81.11% |
+| Strict entity F1 | 67.11% | 65.09% | 73.74% |
+| Annotated-character coverage | 64.41% | 81.72% | 93.11% |
+| Sensitive cases fully covered | 48 / 81 | 66 / 81 | 74 / 81 |
+| Entirely uncovered entities | 34 / 90 | 16 / 90 | 6 / 90 |
+| Negative controls with predictions | 1 / 18 | 3 / 18 | 4 / 18 |
+| Unlabelled-character redaction rate | 1.74% | 7.27% | 8.92% |
+
+Hybrid covered more annotated text on this corpus but also produced more false positives. It still left 121 annotated characters uncovered, including six entirely missed entities and one partially covered entity. Sensitive cases `person-02`, `person-05`, `person-10`, `account-09`, `secret-07`, `mixed-01` and `url-02` were not fully covered. This is not a leak-free result. Character coverage ignores category; strict metrics score the detector's span proposals, including distinct overlapping proposals, rather than the final merged masking output.
+
+### Execution details
+
+The runner used Ubuntu 24.04, Python 3.11.13, `torch==2.8.0+cpu`, two PyTorch threads, a guest exposing four logical AMD EPYC 9V74 CPUs and 16.77 GB physical RAM. Model revision: `7ffa9a043d54d1be65afb281eddf0ffbe629385b`; official runtime commit: `f7f00ca7fb869683eb732c010299d901457f19c3`. The adapter used the pinned Viterbi calibration and a 1,024-token context window, without tuning thresholds or training on this corpus. Exact dependency versions, file hashes and settings are in each raw report.
+
+Total detector time was 52.179 s for OPF and 52.033 s for hybrid; median/p95 short-case latency was 495.859/883.575 ms and 496.155/871.472 ms respectively. These are one-run, warm-model timings. Adapter construction (3.572 s) and one prior synthetic smoke inference (3.830 s, including lazy initialization) were excluded. Hybrid ran second against the already-warm model; do not infer a performance advantage from these small timing differences. Rules timing came from a different Windows machine and is not a controlled cross-mode performance comparison. Peak process memory and long-context latency were not measured.
+
+The preliminary smoke email was missed and that outcome is preserved in both reports. An initial harness run stopped on an inappropriate smoke accuracy assertion; the corrected harness records that accuracy observation and continues, without changing the prompt, model, corpus or thresholds. Inference failures or invalid spans still abort the evaluation.
+
+Python socket connect/DNS/datagram APIs were blocked during construction, smoke and corpus inference, with zero attempted calls recorded. This is a scoped regression assertion, **not** an OS-level network sandbox or proof about native libraries, subprocesses or other applications. Only public synthetic text was used; no hosted AI inference API or provider credential was used.
+
+The separate Windows development-host attempt stopped before inference because Application Control blocked a PyTorch DLL. Its policy was left unchanged. These Linux scores are not evidence of model execution on that Windows host; see [the setup record](model-setup.md).
+
+To reproduce, follow the pinned dependency/setup steps in [.github/workflows/model-evaluation.yml](../.github/workflows/model-evaluation.yml) on an appropriate Linux environment and run `python scripts/evaluate_models.py --checkpoint checkpoints/privacy-filter --output build/model-evaluation`. The script enforces the exact public corpus hash and records the source commit. Maintainers can also run the manual workflow; it never triggers model downloads on pull requests.
 
 ## What has and has not been measured
 
