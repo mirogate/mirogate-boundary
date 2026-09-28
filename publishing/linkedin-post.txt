@@ -1,0 +1,33 @@
+AI privacy needs two tests:
+
+What can your detector miss?
+What did your application actually send?
+
+We built Mirogate Boundary to make both questions testable.
+
+It's an experimental, open-source text gateway with local detection, explicit allow/tokenize/block policies, request-local placeholders, and an Arabic-focused diagnostic corpus.
+
+What ships in v0.1:
+• A Python library and CLI.
+• A pinned local OpenAI Privacy Filter adapter plus Unicode-aware rules.
+• An authenticated, text-only proxy with unsupported inputs rejected.
+• Capture-server tests that inspect the actual outgoing JSON.
+• 99 synthetic cases covering Arabic/mixed text, digit scripts, identifiers, Unicode edge cases and false-positive controls.
+
+The rules-only baseline found 56.67% of exact annotated entities on this small development set. We publish the misses as well as the successes. That number is not the Privacy Filter model's score, and it's not a real-world leak rate.
+
+Actual Linux CPU evaluation is published too. Hybrid detection reached 81.11% exact-entity recall and 93.11% annotated-character coverage—but still left seven sensitive cases incompletely covered and flagged four of 18 negative controls. More coverage comes with trade-offs.
+
+This reduces selected accidental disclosures; it doesn't guarantee privacy. Pseudonymization is reversible, detection can miss data, and applications can bypass the proxy. Streaming, tools and media are explicitly unsupported in this release.
+
+Credit to Abdullah Alsaidi's Maskode work for helping inspire the exploration, and to OpenAI's Privacy Filter team. This also builds on Mirogate's earlier secure-AI framework and Arabic-native evaluation work.
+
+Try the local demo or contribute a synthetic missed-entity/false-positive case. Please don't submit real customer data.
+
+Code, tests and results:
+https://github.com/mirogate/mirogate-boundary
+
+The full write-up:
+https://medium.com/@mirogate/mirogate-boundary-testing-the-data-we-send-to-ai-92e8c1ca1e0d
+
+#AIEngineering #DataPrivacy #OpenSource #ArabicNLP
