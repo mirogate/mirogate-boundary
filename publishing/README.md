@@ -4,7 +4,7 @@ Published on 2026-09-28. These are launch records, not evidence of reach or endo
 
 - [Experimental GitHub release](https://github.com/mirogate/mirogate-boundary/releases/tag/v0.1.0): source distribution, wheel and SHA-256 checksums; release commit `725b2fa72d5b91aea0444b8d5d3ea13c528b5faa`.
 - [Medium article by Mirogate](https://medium.com/@mirogate/mirogate-boundary-testing-the-data-we-send-to-ai-92e8c1ca1e0d): the source HTML is [medium-article.html](medium-article.html). Topics: Artificial Intelligence, Open Source, Data Privacy, NLP and Arabic.
-- [LinkedIn announcement by Mazen Hassani](https://www.linkedin.com/feed/update/urn:li:activity:7510432483797147648/): the source text is [linkedin-post.txt](linkedin-post.txt). Public audience; includes repository and article links.
+- [LinkedIn announcement by Mirogate](https://www.linkedin.com/feed/update/urn:li:share:7510434346437275648/): published from the Mirogate company page. The source text is [linkedin-post.txt](linkedin-post.txt). Public audience; includes repository and article links.
 
 ## Verification evidence
 
