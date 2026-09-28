@@ -2,6 +2,8 @@
 
 [![Test and package](https://github.com/mirogate/mirogate-boundary/actions/workflows/test.yml/badge.svg)](https://github.com/mirogate/mirogate-boundary/actions/workflows/test.yml)
 
+[العربية — دليل البدء](README.ar.md)
+
 Local-first text egress guardrails for AI applications, with an Arabic-focused privacy evaluation suite.
 
 **v0.1 is an experimental developer tool, not a security guarantee.** Detection can miss personal data, especially contextual, multilingual, obfuscated, or inferred information. Use synthetic inputs first. A request that passes the detector can still contain sensitive data.

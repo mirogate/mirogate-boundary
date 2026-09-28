@@ -9,6 +9,7 @@ Python socket monkeypatches are an offline regression assertion, not an OS sandb
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 from contextlib import ExitStack, contextmanager
 from datetime import datetime, timezone
 import hashlib
@@ -161,12 +162,20 @@ def main() -> int:
         run_metadata["smoke_seconds_including_lazy_initialization"] = time.perf_counter() - start
         email_start = SMOKE.index("synthetic.person@example.com")
         email_end = email_start + len("synthetic.person@example.com")
-        if not any(span.category == "private_email" and span.start <= email_start
-                   and span.end >= email_end for span in smoke_spans):
-            raise RuntimeError("Actual local-model synthetic email smoke assertion failed")
+        # This smoke checks offline execution, not model accuracy. Preserve a miss
+        # instead of replacing the prompt or refusing to measure poor performance.
+        smoke_email_covered = any(span.category == "private_email" and span.start <= email_start
+                                  and span.end >= email_end for span in smoke_spans)
+        run_metadata["smoke"] = {
+            "text_sha256": hashlib.sha256(SMOKE.encode()).hexdigest(),
+            "expected_email_fully_covered": smoke_email_covered,
+            "predicted_category_counts": dict(Counter(span.category for span in smoke_spans)),
+            "purpose": "Offline execution assertion only; detection accuracy is recorded without a pass threshold",
+        }
         if offline["blocked_attempts"]:
             raise RuntimeError("Local model attempted network access despite local setup")
-        print("Actual OPF smoke passed with Python socket guard active.", flush=True)
+        print(json.dumps({"offline_smoke_completed": True,
+                          "expected_email_fully_covered": smoke_email_covered}), flush=True)
         for mode, detector in (("opf", model), ("hybrid", HybridDetector(RuleDetector(), model))):
             print(f"Starting {mode}: 99 fresh synthetic-case inferences.", flush=True)
             started_at = datetime.now(timezone.utc).isoformat()
