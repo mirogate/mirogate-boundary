@@ -1,0 +1,11 @@
+Mirogate Boundary
+Copyright 2026 Mirogate
+
+An independent project. No endorsement by OpenAI, Microsoft, Anthropic, or other
+referenced providers is implied.
+
+The optional detector integrates the separately licensed OpenAI Privacy Filter
+runtime and model. No model weights or upstream source code are bundled.
+
+Conceptual inspiration: Abdullah Alsaidi's Maskode and Mirogate's Secure AI
+Engineering Framework and Arabic-Native Agent Bench. See README.md for links.

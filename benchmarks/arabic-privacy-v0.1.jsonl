@@ -1,0 +1,99 @@
+{"id":"person-01","family":"arabic_names","text":"اسم العميل: سليم نادر.","spans":[{"start":12,"end":21,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"person-02","family":"arabic_names","text":"يرجى الاتصال بالسيدة ليلى الحسن بخصوص الطلب.","spans":[{"start":21,"end":31,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"person-03","family":"arabic_names","text":"المراجع: د. حسام عبد الكريم؛ الموعد غداً.","spans":[{"start":12,"end":27,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"person-04","family":"arabic_names","text":"اسم المريض: مَرْيَم خَالِد.","spans":[{"start":12,"end":26,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"person-05","family":"arabic_names","text":"وصل عمر بن ناصر السالم إلى مكتب الخدمة.","spans":[{"start":4,"end":22,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"person-06","family":"arabic_names","text":"أرسل الفاتورة إلى نور الهدى منصور.","spans":[{"start":18,"end":33,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"person-07","family":"arabic_names","text":"{\"customer_name\":\"هبة أمين\",\"status\":\"active\"}","spans":[{"start":18,"end":26,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"person-08","family":"arabic_names","text":"Customer: Layla Al-Hassan; اللغة المفضلة: العربية.","spans":[{"start":10,"end":25,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"person-09","family":"arabic_names","text":"esm el 3ameel Omar Nader w 3ayez yghayyar el 3enwan.","spans":[{"start":14,"end":24,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"person-10","family":"arabic_names","text":"راجع الطلب سليم نادر ثم وافق عليه ليلى الحسن.","spans":[{"start":11,"end":20,"category":"private_person"},{"start":34,"end":44,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"person-11","family":"arabic_names","text":"نام مشتری: سارا نادری.","spans":[{"start":11,"end":21,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"person-12","family":"arabic_names","text":"صارف کا نام: عائشہ نور۔","spans":[{"start":13,"end":22,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"phone-01","family":"phone_digits","text":"هاتف العميل: +963 999 000 001","spans":[{"start":13,"end":29,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"phone-02","family":"phone_digits","text":"رقم الجوال: ٠٩٩٩٠٠٠٠٠١","spans":[{"start":12,"end":22,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"phone-03","family":"phone_digits","text":"هاتف: +٩٧١ ٥٠ ٠٠٠ ٠٠٠١","spans":[{"start":6,"end":22,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"phone-04","family":"phone_digits","text":"شماره تماس: +۹۸ ۹۱۲ ۰۰۰ ۰۰۰۱","spans":[{"start":12,"end":28,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"phone-05","family":"phone_digits","text":"اتصل على +1 (202) 555-0104 بعد الظهر.","spans":[{"start":9,"end":26,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"phone-06","family":"phone_digits","text":"WhatsApp: +44 7700 900123","spans":[{"start":10,"end":25,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"phone-07","family":"phone_digits","text":"رقم التواصل: 00966 50 000 0001","spans":[{"start":13,"end":30,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"phone-08","family":"phone_digits","text":"المحمول: +٩٦٦-٥٠-٠٠٠-٠٠٠١","spans":[{"start":9,"end":25,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"phone-09","family":"phone_digits","text":"{\"phone\":\"+971500000001\"}","spans":[{"start":10,"end":23,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"phone-10","family":"phone_digits","text":"جوالي +20 100 000 0001؛ لا تنشره.","spans":[{"start":6,"end":22,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"phone-11","family":"phone_digits","text":"هاتف العمل: +1-202-555-0119 تحويلة ٤٢.","spans":[{"start":12,"end":27,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"phone-12","family":"phone_digits","text":"الجوال: +٩٦٦ ٥0 ٠٠0 ٠٠٠١","spans":[{"start":8,"end":24,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"email-01","family":"email","text":"البريد الإلكتروني: layla@example.com","spans":[{"start":19,"end":36,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"email-02","family":"email","text":"Send the invoice to billing+case42@example.org.","spans":[{"start":20,"end":46,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"email-03","family":"email","text":"<nour.hassan@example.net>","spans":[{"start":1,"end":24,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"email-04","family":"email","text":"{\"contact\":{\"email\":\"support@example.com\"}}","spans":[{"start":21,"end":40,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"email-05","family":"email","text":"بريدي سليم@example.com؛ يرجى الرد.","spans":[{"start":6,"end":22,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"email-06","family":"email","text":"Contact Omar.Nader@EXAMPLE.COM urgently.","spans":[{"start":8,"end":30,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"email-07","family":"email","text":"To: first@example.org\nCc: second@example.net","spans":[{"start":4,"end":21,"category":"private_email"},{"start":26,"end":44,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"email-08","family":"email","text":"الايميل: layla [at] example [dot] com","spans":[{"start":9,"end":37,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"email-09","family":"email","text":"عنواني nour(at)example.org.","spans":[{"start":7,"end":26,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"email-10","family":"email","text":"البريد: sara​@example.com (نسخ من ملف).","spans":[{"start":8,"end":25,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"account-01","family":"financial_ids","text":"IBAN: SA0380000000608010167519","spans":[{"start":6,"end":30,"category":"account_number"}],"provenance":"synthetic"}
+{"id":"account-02","family":"financial_ids","text":"الحساب البنكي: 0000123456789012","spans":[{"start":15,"end":31,"category":"account_number"}],"provenance":"synthetic"}
+{"id":"account-03","family":"financial_ids","text":"رقم الهوية: 0000000001","spans":[{"start":12,"end":22,"category":"account_number"}],"provenance":"synthetic"}
+{"id":"account-04","family":"financial_ids","text":"رقم الإقامة: 0000000002","spans":[{"start":13,"end":23,"category":"account_number"}],"provenance":"synthetic"}
+{"id":"account-05","family":"financial_ids","text":"الرقم الوطني: ٠٠٠٠٠٠٠٠٠٠١","spans":[{"start":14,"end":25,"category":"account_number"}],"provenance":"synthetic"}
+{"id":"account-06","family":"financial_ids","text":"IBAN: GB82 WEST 1234 5698 7654 32","spans":[{"start":6,"end":33,"category":"account_number"}],"provenance":"synthetic"}
+{"id":"account-07","family":"financial_ids","text":"{\"national_id\":\"0000000003\",\"country\":\"SY\"}","spans":[{"start":16,"end":26,"category":"account_number"}],"provenance":"synthetic"}
+{"id":"account-08","family":"financial_ids","text":"رقم جواز السفر: N00000001","spans":[{"start":16,"end":25,"category":"account_number"}],"provenance":"synthetic"}
+{"id":"account-09","family":"financial_ids","text":"بطاقة الدفع: 4111 1111 1111 1111","spans":[{"start":13,"end":32,"category":"account_number"}],"provenance":"synthetic"}
+{"id":"account-10","family":"financial_ids","text":"Account number: ٠٠٠٠ ١٢٣٤ ٥٦٧٨ ٩٠١٢","spans":[{"start":16,"end":35,"category":"account_number"}],"provenance":"synthetic"}
+{"id":"address-01","family":"addresses_dates","text":"عنوان المنزل: شارع النور، بناء ١٢، شقة ٣، دمشق","spans":[{"start":14,"end":46,"category":"private_address"}],"provenance":"synthetic"}
+{"id":"address-02","family":"addresses_dates","text":"عنوان التوصيل: حي الورد، شارع ٧، منزل ٢١، الرياض","spans":[{"start":15,"end":48,"category":"private_address"}],"provenance":"synthetic"}
+{"id":"address-03","family":"addresses_dates","text":"She lives at 123 Example Street, Apt 4, Exampleville.","spans":[{"start":13,"end":52,"category":"private_address"}],"provenance":"synthetic"}
+{"id":"address-04","family":"addresses_dates","text":"العنوان: دبي، بناية المثال، الطابق ٤، شقة ٤٠٢","spans":[{"start":9,"end":45,"category":"private_address"}],"provenance":"synthetic"}
+{"id":"address-05","family":"addresses_dates","text":"{\"home_address\":\"شارع الأمل ١٠، حلب\"}","spans":[{"start":17,"end":35,"category":"private_address"}],"provenance":"synthetic"}
+{"id":"date-01","family":"addresses_dates","text":"تاريخ الميلاد: 1990-04-17","spans":[{"start":15,"end":25,"category":"private_date"}],"provenance":"synthetic"}
+{"id":"date-02","family":"addresses_dates","text":"ولد العميل بتاريخ ١٧/٠٤/١٩٩٠.","spans":[{"start":18,"end":28,"category":"private_date"}],"provenance":"synthetic"}
+{"id":"date-03","family":"addresses_dates","text":"DOB: 04/17/1990","spans":[{"start":5,"end":15,"category":"private_date"}],"provenance":"synthetic"}
+{"id":"date-04","family":"addresses_dates","text":"{\"date_of_birth\":\"1992-12-03\"}","spans":[{"start":18,"end":28,"category":"private_date"}],"provenance":"synthetic"}
+{"id":"secret-01","family":"secrets","text":"OPENAI_API_KEY=sk-proj-EXAMPLE000000000000000000000000000000000000","spans":[{"start":15,"end":66,"category":"secret"}],"provenance":"synthetic"}
+{"id":"secret-02","family":"secrets","text":"Authorization: Bearer example_token_do_not_use_7ab18cd92f","spans":[{"start":22,"end":57,"category":"secret"}],"provenance":"synthetic"}
+{"id":"secret-03","family":"secrets","text":"كلمة المرور: Example!NotReal#783","spans":[{"start":13,"end":32,"category":"secret"}],"provenance":"synthetic"}
+{"id":"secret-04","family":"secrets","text":"{\"password\":\"not-a-real-password-42\"}","spans":[{"start":13,"end":35,"category":"secret"}],"provenance":"synthetic"}
+{"id":"secret-05","family":"secrets","text":"AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY","spans":[{"start":22,"end":62,"category":"secret"}],"provenance":"synthetic"}
+{"id":"secret-06","family":"secrets","text":"github_token=ghp_EXAMPLE000000000000000000000000000000","spans":[{"start":13,"end":54,"category":"secret"}],"provenance":"synthetic"}
+{"id":"secret-07","family":"secrets","text":"token: eyJhbGciOiJub25lIn0.eyJzdWIiOiJleGFtcGxlIn0.","spans":[{"start":7,"end":51,"category":"secret"}],"provenance":"synthetic"}
+{"id":"secret-08","family":"secrets","text":"DATABASE_URL=postgresql://example:NotReal123!@localhost:5432/demo","spans":[{"start":34,"end":45,"category":"secret"}],"provenance":"synthetic"}
+{"id":"secret-09","family":"secrets","text":"-----BEGIN PRIVATE KEY-----\nRXhhbXBsZSBub3QgYSByZWFsIGtleQ==\n-----END PRIVATE KEY-----","spans":[{"start":0,"end":86,"category":"secret"}],"provenance":"synthetic"}
+{"id":"secret-10","family":"secrets","text":"الرمز السري المؤقت: 004271","spans":[{"start":20,"end":26,"category":"secret"}],"provenance":"synthetic"}
+{"id":"unicode-01","family":"unicode_adversarial","text":"📦 بريد العميل: parcel@example.com؛ الحالة جاهز.","spans":[{"start":15,"end":33,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"unicode-02","family":"unicode_adversarial","text":"Email: nour‍@example.com","spans":[{"start":7,"end":24,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"unicode-03","family":"unicode_adversarial","text":"رقم الهاتف: +٩٦٦​٥٠​٠٠٠​٠٠٠١","spans":[{"start":12,"end":28,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"unicode-04","family":"unicode_adversarial","text":"Name: ⁧ليلى الحسن⁩","spans":[{"start":7,"end":17,"category":"private_person"}],"provenance":"synthetic"}
+{"id":"unicode-05","family":"unicode_adversarial","text":"البريد: ‮layla@example.com‬","spans":[{"start":9,"end":26,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"unicode-06","family":"unicode_adversarial","text":"email: ｌａｙｌａ＠ｅｘａｍｐｌｅ．ｃｏｍ","spans":[{"start":7,"end":24,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"unicode-07","family":"unicode_adversarial","text":"رقم الهـويـة: ٠٠٠٠٠٠٠٠٠٤","spans":[{"start":14,"end":24,"category":"account_number"}],"provenance":"synthetic"}
+{"id":"unicode-08","family":"unicode_adversarial","text":"كـلـمـة الـمـرور: ExamplePassword!82","spans":[{"start":18,"end":36,"category":"secret"}],"provenance":"synthetic"}
+{"id":"mixed-01","family":"workflow_payloads","text":"tool_result={\"customer\":\"ليلى الحسن\",\"email\":\"layla@example.com\",\"count\":3}","spans":[{"start":25,"end":35,"category":"private_person"},{"start":46,"end":63,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"mixed-02","family":"workflow_payloads","text":"2026-01-01T10:00:00Z INFO customer_email=sale@example.net request_id=req_001","spans":[{"start":41,"end":57,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"mixed-03","family":"workflow_payloads","text":"| الاسم | الهاتف |\n| سليم نادر | +1 202 555 0108 |","spans":[{"start":21,"end":30,"category":"private_person"},{"start":33,"end":48,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"mixed-04","family":"workflow_payloads","text":"Client Nour Hassan طلب reset. Email nour@example.com; password=NotReal!ChangeMe77","spans":[{"start":7,"end":18,"category":"private_person"},{"start":36,"end":52,"category":"private_email"},{"start":63,"end":81,"category":"secret"}],"provenance":"synthetic"}
+{"id":"mixed-05","family":"workflow_payloads","text":"MCP search returned: Customer Omar Nader, phone +44 7700 900321.","spans":[{"start":30,"end":40,"category":"private_person"},{"start":48,"end":63,"category":"private_phone"}],"provenance":"synthetic"}
+{"id":"mixed-06","family":"workflow_payloads","text":"البريد القديم old@example.org والجديد new@example.org. أرسل إلى new@example.org.","spans":[{"start":14,"end":29,"category":"private_email"},{"start":38,"end":53,"category":"private_email"},{"start":64,"end":79,"category":"private_email"}],"provenance":"synthetic"}
+{"id":"mixed-07","family":"workflow_payloads","text":"{\"message\":\"لا تشارك\",\"api_key\":\"EXAMPLE_8ed71ef4b94b4e63b20ef186b9ed1f77\",\"attempts\":2}","spans":[{"start":33,"end":73,"category":"secret"}],"provenance":"synthetic"}
+{"id":"url-01","family":"private_urls","text":"Private reset link: https://example.com/reset?token=EXAMPLE_1947abcdef","spans":[{"start":20,"end":70,"category":"private_url"}],"provenance":"synthetic"}
+{"id":"url-02","family":"private_urls","text":"Customer portal: https://example.org/customers/layla-hassan/invoices/42","spans":[{"start":17,"end":71,"category":"private_url"}],"provenance":"synthetic"}
+{"id":"url-03","family":"private_urls","text":"رابط الملف الشخصي الخاص: https://example.net/private/customer-00017","spans":[{"start":25,"end":67,"category":"private_url"}],"provenance":"synthetic"}
+{"id":"negative-01","family":"negative_controls","text":"Mirogate builds open-source software.","spans":[],"provenance":"synthetic"}
+{"id":"negative-02","family":"negative_controls","text":"OpenAI and Anthropic are model providers.","spans":[],"provenance":"synthetic"}
+{"id":"negative-03","family":"negative_controls","text":"أهلاً بالعالم. هذا اختبار للنص العربي.","spans":[],"provenance":"synthetic"}
+{"id":"negative-04","family":"negative_controls","text":"HTTP status 404. Retry after 30 seconds.","spans":[],"provenance":"synthetic"}
+{"id":"negative-05","family":"negative_controls","text":"Release v1.2.3 requires Python >=3.10.","spans":[],"provenance":"synthetic"}
+{"id":"negative-06","family":"negative_controls","text":"const password = getPasswordFromVault();","spans":[],"provenance":"synthetic"}
+{"id":"negative-07","family":"negative_controls","text":"The API_KEY environment variable must be set.","spans":[],"provenance":"synthetic"}
+{"id":"negative-08","family":"negative_controls","text":"The public documentation is at https://example.com/docs.","spans":[],"provenance":"synthetic"}
+{"id":"negative-09","family":"negative_controls","text":"عدد الطلبات ١٢٣٤، والمجموع ٥٦٧٨ ليرة.","spans":[],"provenance":"synthetic"}
+{"id":"negative-10","family":"negative_controls","text":"موعد إطلاق المنتج: 2026-10-01.","spans":[],"provenance":"synthetic"}
+{"id":"negative-11","family":"negative_controls","text":"أحب مدينة دمشق، والرياض مدينة جميلة.","spans":[],"provenance":"synthetic"}
+{"id":"negative-12","family":"negative_controls","text":"SHA256 is a hash function; TLS 1.3 secures connections.","spans":[],"provenance":"synthetic"}
+{"id":"negative-13","family":"negative_controls","text":"SELECT customer_name, email FROM customers LIMIT 10;","spans":[],"provenance":"synthetic"}
+{"id":"negative-14","family":"negative_controls","text":"{\"temperature\":0.7,\"max_tokens\":1024,\"stream\":false}","spans":[],"provenance":"synthetic"}
+{"id":"negative-15","family":"negative_controls","text":"Trace id: abcdef1234567890. Build number: 900123.","spans":[],"provenance":"synthetic"}
+{"id":"negative-16","family":"negative_controls","text":"الاتصال بالدعم متاح دون تسجيل الاسم أو رقم الهاتف.","spans":[],"provenance":"synthetic"}
+{"id":"negative-17","family":"negative_controls","text":"A bearer token belongs in the Authorization header.","spans":[],"provenance":"synthetic"}
+{"id":"negative-18","family":"negative_controls","text":"رقم الصفحة: ٠٠١٢. إصدار المستند: ٢٠٢٦.","spans":[],"provenance":"synthetic"}

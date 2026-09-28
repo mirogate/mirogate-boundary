@@ -1,0 +1,32 @@
+name: Synthetic privacy test case
+description: Report a missed entity or false positive without sharing real data.
+body:
+  - type: markdown
+    attributes:
+      value: "Use entirely synthetic text and reserved example domains. Never paste customer records, active secrets, identifying incident data, or private screenshots."
+  - type: dropdown
+    id: type
+    attributes:
+      label: Observation
+      options: [Missed entity, False positive, Offset/restoration error]
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Synthetic example and expected behavior
+      description: Include language/dialect and the expected entity span.
+    validations:
+      required: true
+  - type: input
+    id: detector
+    attributes:
+      label: Detector and release
+      description: rules, opf or hybrid; include pinned model revision if relevant.
+  - type: checkboxes
+    id: synthetic
+    attributes:
+      label: Data check
+      options:
+        - label: This example is invented and contains no real personal data or active credential.
+          required: true
