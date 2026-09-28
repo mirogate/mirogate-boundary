@@ -54,6 +54,8 @@ class RulesTests(unittest.TestCase):
         for text, value in [
             ("api_key=sk-example1234567890", "sk-example1234567890"),
             ('"password": "synthetic-pass-321"', "synthetic-pass-321"),
+            ('"password": "abc"', "abc"),
+            ('"password": "a spaced passphrase"', "a spaced passphrase"),
             ("Authorization: Bearer abcdefgh12345678", "abcdefgh12345678"),
             ("https://user:syntheticpass@example.com/path", "user:syntheticpass"),
             ("-----BEGIN PRIVATE KEY-----\nSYNTHETIC\n-----END PRIVATE KEY-----",

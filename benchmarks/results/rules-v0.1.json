@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-28T19:51:55.776263+00:00",
+  "generated_at": "2026-09-28T19:58:12.131470+00:00",
   "warning": "This small, synthetic, author-labelled development corpus is not a held-out or representative evaluation. Scores do not establish real-world privacy, anonymity, compliance, or complete egress protection. No independent human annotation review has been performed.",
   "dataset": {
     "name": "arabic-privacy-v0.1.jsonl",
@@ -13,7 +13,7 @@
   },
   "detector": {
     "class": "mirogate_boundary.detectors.RuleDetector",
-    "module_sha256": "90fe784fb1c681253819a0a79a0368a1b990e234fd4c4723066e8c72dd63c597",
+    "module_sha256": "5e7a2424b7729198d339d3ac6ea2a76b0775b76349bbfb815503921d18a21346",
     "metadata": {
       "detector": "rules-v1",
       "inference": "deterministic-rules",
@@ -21,7 +21,7 @@
     }
   },
   "software": {
-    "mirogate_boundary": "source-tree (uninstalled)",
+    "mirogate_boundary": "0.1.0",
     "python": "3.13.14",
     "platform": "Windows-11-10.0.26200-SP0"
   },
@@ -402,11 +402,11 @@
     }
   },
   "latency_ms": {
-    "total": 20.442,
-    "mean": 0.206,
-    "p50": 0.163,
-    "p95": 0.407,
-    "max": 2.933,
+    "total": 44.493,
+    "mean": 0.449,
+    "p50": 0.25,
+    "p95": 1.406,
+    "max": 9.476,
     "method": "perf_counter; nearest-rank percentiles; model construction excluded; first inference included"
   },
   "cases": [
@@ -445,7 +445,7 @@
       "non_sensitive_character_redaction_rate": 0.076923,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.205
+      "duration_ms": 0.482
     },
     {
       "id": "person-02",
@@ -482,7 +482,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.216
+      "duration_ms": 0.272
     },
     {
       "id": "person-03",
@@ -519,7 +519,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.176
+      "duration_ms": 0.413
     },
     {
       "id": "person-04",
@@ -556,7 +556,7 @@
       "non_sensitive_character_redaction_rate": 0.076923,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.127
+      "duration_ms": 9.476
     },
     {
       "id": "person-05",
@@ -593,7 +593,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.178
+      "duration_ms": 0.321
     },
     {
       "id": "person-06",
@@ -630,7 +630,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.15
+      "duration_ms": 0.185
     },
     {
       "id": "person-07",
@@ -667,7 +667,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.209
+      "duration_ms": 0.244
     },
     {
       "id": "person-08",
@@ -704,7 +704,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.166
+      "duration_ms": 0.25
     },
     {
       "id": "person-09",
@@ -741,7 +741,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.55
+      "duration_ms": 0.234
     },
     {
       "id": "person-10",
@@ -778,7 +778,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.183
+      "duration_ms": 0.25
     },
     {
       "id": "person-11",
@@ -815,7 +815,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.099
+      "duration_ms": 0.341
     },
     {
       "id": "person-12",
@@ -852,7 +852,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.142
+      "duration_ms": 1.365
     },
     {
       "id": "phone-01",
@@ -889,7 +889,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.286
+      "duration_ms": 0.423
     },
     {
       "id": "phone-02",
@@ -926,7 +926,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.252
+      "duration_ms": 0.347
     },
     {
       "id": "phone-03",
@@ -963,7 +963,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.178
+      "duration_ms": 0.356
     },
     {
       "id": "phone-04",
@@ -1000,7 +1000,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.153
+      "duration_ms": 0.556
     },
     {
       "id": "phone-05",
@@ -1037,7 +1037,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.192
+      "duration_ms": 0.341
     },
     {
       "id": "phone-06",
@@ -1074,7 +1074,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.135
+      "duration_ms": 0.296
     },
     {
       "id": "phone-07",
@@ -1111,7 +1111,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.167
+      "duration_ms": 0.224
     },
     {
       "id": "phone-08",
@@ -1148,7 +1148,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.118
+      "duration_ms": 0.197
     },
     {
       "id": "phone-09",
@@ -1185,7 +1185,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.135
+      "duration_ms": 0.178
     },
     {
       "id": "phone-10",
@@ -1222,7 +1222,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.165
+      "duration_ms": 0.243
     },
     {
       "id": "phone-11",
@@ -1259,7 +1259,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.158
+      "duration_ms": 0.216
     },
     {
       "id": "phone-12",
@@ -1296,7 +1296,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.093
+      "duration_ms": 0.152
     },
     {
       "id": "email-01",
@@ -1333,7 +1333,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.099
+      "duration_ms": 0.202
     },
     {
       "id": "email-02",
@@ -1370,7 +1370,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.128
+      "duration_ms": 0.231
     },
     {
       "id": "email-03",
@@ -1407,7 +1407,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.067
+      "duration_ms": 0.115
     },
     {
       "id": "email-04",
@@ -1444,7 +1444,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.105
+      "duration_ms": 0.198
     },
     {
       "id": "email-05",
@@ -1481,7 +1481,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.092
+      "duration_ms": 0.194
     },
     {
       "id": "email-06",
@@ -1518,7 +1518,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.1
+      "duration_ms": 0.172
     },
     {
       "id": "email-07",
@@ -1555,7 +1555,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.128
+      "duration_ms": 0.256
     },
     {
       "id": "email-08",
@@ -1592,7 +1592,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.103
+      "duration_ms": 0.319
     },
     {
       "id": "email-09",
@@ -1629,7 +1629,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.079
+      "duration_ms": 0.149
     },
     {
       "id": "email-10",
@@ -1666,7 +1666,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.147
+      "duration_ms": 0.518
     },
     {
       "id": "account-01",
@@ -1703,7 +1703,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.108
+      "duration_ms": 0.272
     },
     {
       "id": "account-02",
@@ -1740,7 +1740,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.092
+      "duration_ms": 0.147
     },
     {
       "id": "account-03",
@@ -1777,7 +1777,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.677
+      "duration_ms": 0.567
     },
     {
       "id": "account-04",
@@ -1814,7 +1814,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.163
+      "duration_ms": 0.226
     },
     {
       "id": "account-05",
@@ -1851,7 +1851,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.177
+      "duration_ms": 0.163
     },
     {
       "id": "account-06",
@@ -1888,7 +1888,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.142
+      "duration_ms": 0.582
     },
     {
       "id": "account-07",
@@ -1925,7 +1925,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.173
+      "duration_ms": 0.285
     },
     {
       "id": "account-08",
@@ -1962,7 +1962,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.096
+      "duration_ms": 2.217
     },
     {
       "id": "account-09",
@@ -1999,7 +1999,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.118
+      "duration_ms": 0.272
     },
     {
       "id": "account-10",
@@ -2036,7 +2036,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.146
+      "duration_ms": 0.37
     },
     {
       "id": "address-01",
@@ -2073,7 +2073,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.184
+      "duration_ms": 0.295
     },
     {
       "id": "address-02",
@@ -2110,7 +2110,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.176
+      "duration_ms": 0.309
     },
     {
       "id": "address-03",
@@ -2147,7 +2147,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.176
+      "duration_ms": 2.463
     },
     {
       "id": "address-04",
@@ -2184,7 +2184,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.196
+      "duration_ms": 0.383
     },
     {
       "id": "address-05",
@@ -2221,7 +2221,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.172
+      "duration_ms": 0.325
     },
     {
       "id": "date-01",
@@ -2258,7 +2258,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.107
+      "duration_ms": 0.249
     },
     {
       "id": "date-02",
@@ -2295,7 +2295,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.14
+      "duration_ms": 0.172
     },
     {
       "id": "date-03",
@@ -2332,7 +2332,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.071
+      "duration_ms": 0.102
     },
     {
       "id": "date-04",
@@ -2369,7 +2369,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.114
+      "duration_ms": 0.149
     },
     {
       "id": "secret-01",
@@ -2406,7 +2406,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.222
+      "duration_ms": 0.294
     },
     {
       "id": "secret-02",
@@ -2443,7 +2443,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.203
+      "duration_ms": 0.26
     },
     {
       "id": "secret-03",
@@ -2480,7 +2480,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.144
+      "duration_ms": 0.229
     },
     {
       "id": "secret-04",
@@ -2517,7 +2517,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.14
+      "duration_ms": 0.18
     },
     {
       "id": "secret-05",
@@ -2554,7 +2554,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.175
+      "duration_ms": 0.252
     },
     {
       "id": "secret-06",
@@ -2591,7 +2591,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.178
+      "duration_ms": 0.2
     },
     {
       "id": "secret-07",
@@ -2628,7 +2628,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.165
+      "duration_ms": 0.221
     },
     {
       "id": "secret-08",
@@ -2665,7 +2665,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.189
+      "duration_ms": 0.303
     },
     {
       "id": "secret-09",
@@ -2702,7 +2702,7 @@
       "non_sensitive_character_redaction_rate": null,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.408
+      "duration_ms": 0.386
     },
     {
       "id": "secret-10",
@@ -2739,7 +2739,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.159
+      "duration_ms": 0.183
     },
     {
       "id": "unicode-01",
@@ -2776,7 +2776,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.237
+      "duration_ms": 0.348
     },
     {
       "id": "unicode-02",
@@ -2813,7 +2813,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.118
+      "duration_ms": 0.144
     },
     {
       "id": "unicode-03",
@@ -2850,7 +2850,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.145
+      "duration_ms": 0.257
     },
     {
       "id": "unicode-04",
@@ -2887,7 +2887,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.075
+      "duration_ms": 0.101
     },
     {
       "id": "unicode-05",
@@ -2924,7 +2924,7 @@
       "non_sensitive_character_redaction_rate": 0.1,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.108
+      "duration_ms": 0.15
     },
     {
       "id": "unicode-06",
@@ -2961,7 +2961,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.115
+      "duration_ms": 0.19
     },
     {
       "id": "unicode-07",
@@ -2998,7 +2998,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 2.933
+      "duration_ms": 1.406
     },
     {
       "id": "unicode-08",
@@ -3035,7 +3035,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.132
+      "duration_ms": 0.542
     },
     {
       "id": "mixed-01",
@@ -3072,7 +3072,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.258
+      "duration_ms": 0.459
     },
     {
       "id": "mixed-02",
@@ -3109,7 +3109,7 @@
       "non_sensitive_character_redaction_rate": 0.25,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.274
+      "duration_ms": 0.358
     },
     {
       "id": "mixed-03",
@@ -3146,7 +3146,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.207
+      "duration_ms": 0.287
     },
     {
       "id": "mixed-04",
@@ -3183,7 +3183,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.284
+      "duration_ms": 0.409
     },
     {
       "id": "mixed-05",
@@ -3220,7 +3220,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.234
+      "duration_ms": 0.365
     },
     {
       "id": "mixed-06",
@@ -3257,7 +3257,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.28
+      "duration_ms": 0.364
     },
     {
       "id": "mixed-07",
@@ -3294,7 +3294,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.29
+      "duration_ms": 0.41
     },
     {
       "id": "url-01",
@@ -3331,7 +3331,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 1.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.332
+      "duration_ms": 0.288
     },
     {
       "id": "url-02",
@@ -3368,7 +3368,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.407
+      "duration_ms": 2.628
     },
     {
       "id": "url-03",
@@ -3405,7 +3405,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": 0.0,
       "negative_case_false_positive_rate": null,
-      "duration_ms": 0.283
+      "duration_ms": 0.386
     },
     {
       "id": "negative-01",
@@ -3442,7 +3442,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.125
+      "duration_ms": 0.21
     },
     {
       "id": "negative-02",
@@ -3479,7 +3479,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.141
+      "duration_ms": 0.154
     },
     {
       "id": "negative-03",
@@ -3516,7 +3516,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.186
+      "duration_ms": 0.205
     },
     {
       "id": "negative-04",
@@ -3553,7 +3553,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.223
+      "duration_ms": 0.266
     },
     {
       "id": "negative-05",
@@ -3590,7 +3590,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.197
+      "duration_ms": 0.166
     },
     {
       "id": "negative-06",
@@ -3627,7 +3627,7 @@
       "non_sensitive_character_redaction_rate": 0.55,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 1.0,
-      "duration_ms": 0.158
+      "duration_ms": 0.227
     },
     {
       "id": "negative-07",
@@ -3664,7 +3664,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.127
+      "duration_ms": 0.207
     },
     {
       "id": "negative-08",
@@ -3701,7 +3701,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.182
+      "duration_ms": 0.221
     },
     {
       "id": "negative-09",
@@ -3738,7 +3738,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.138
+      "duration_ms": 0.198
     },
     {
       "id": "negative-10",
@@ -3775,7 +3775,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.11
+      "duration_ms": 0.146
     },
     {
       "id": "negative-11",
@@ -3812,7 +3812,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.145
+      "duration_ms": 0.213
     },
     {
       "id": "negative-12",
@@ -3849,7 +3849,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.166
+      "duration_ms": 0.215
     },
     {
       "id": "negative-13",
@@ -3886,7 +3886,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.183
+      "duration_ms": 0.193
     },
     {
       "id": "negative-14",
@@ -3923,7 +3923,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.274
+      "duration_ms": 0.191
     },
     {
       "id": "negative-15",
@@ -3960,7 +3960,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.162
+      "duration_ms": 0.179
     },
     {
       "id": "negative-16",
@@ -3997,7 +3997,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.217
+      "duration_ms": 0.251
     },
     {
       "id": "negative-17",
@@ -4034,7 +4034,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.156
+      "duration_ms": 0.193
     },
     {
       "id": "negative-18",
@@ -4071,7 +4071,7 @@
       "non_sensitive_character_redaction_rate": 0.0,
       "sensitive_case_full_coverage_rate": null,
       "negative_case_false_positive_rate": 0.0,
-      "duration_ms": 0.145
+      "duration_ms": 0.194
     }
   ]
 }

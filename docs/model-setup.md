@@ -85,3 +85,27 @@ Model and stated limitations: [official model card](https://huggingface.co/opena
 The upstream runtime and model are Apache-2.0 licensed; Boundary does not redistribute
 their weights. Mirogate is independent of OpenAI and this project is not endorsed
 by OpenAI.
+
+## Local Windows verification record — 2026-09-28
+
+On the development host (Windows, Python 3.13, 8 GB RAM, Intel integrated graphics),
+the pinned OPF package and dependencies installed in a dedicated `.venv`. The
+2,798,984,088-byte model and configuration/calibration/tokenizer artifacts downloaded
+successfully and passed the adapter's pinned SHA-256 checks. The model's SHA-256 is
+`9c262cbe68a0c8a50590a648ef8341a2b7d3be1fa11dfb79893fe0b03ce57b5c`.
+
+An attempted real CPU inference run stopped during `import torch`, before any
+inference, with **Windows Application Control error 4551**: a policy blocked
+`torch/lib/shm.dll` or one of its dependencies. Installed PyTorch was 2.14.0 and
+OPF was the pinned source archive above. No model-accuracy or hybrid-accuracy
+baseline was produced by that attempt. Passing adapter unit tests does not change
+that outcome. The attempted process had network socket connections denied as a
+diagnostic precaution, but because inference never started, this is **not** a
+successful offline-inference proof.
+
+This is a host-specific security-policy limitation, not evidence that OPF cannot
+run on Windows generally. Do not disable or bypass application-control policy to
+run a privacy tool. Use an appropriately approved runtime or environment; any
+Linux CI model results must be identified separately from this Windows attempt.
+The verified public checkpoint remains in the ignored `checkpoints/` directory for
+a future approved run.

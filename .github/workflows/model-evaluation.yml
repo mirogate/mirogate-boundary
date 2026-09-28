@@ -1,0 +1,53 @@
+name: Manual local-model evaluation
+
+# Deliberately manual: no model downloads or inference on pull requests.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-baselines:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUNBUFFERED: '1'
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11.13'
+      - name: Install pinned CPU runtime (no CUDA dependencies)
+        run: |
+          python -m pip install 'torch==2.8.0' --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'numpy==2.3.3' 'packaging==25.0' 'huggingface-hub==0.35.0' 'safetensors==0.6.2' 'tiktoken==0.11.0'
+          python -m pip install --no-deps 'https://github.com/openai/privacy-filter/archive/f7f00ca7fb869683eb732c010299d901457f19c3.zip'
+          python -m pip install --no-deps .
+          python -m pip check
+      - name: Check fixed synthetic corpus and offline guard
+        run: python scripts/evaluate_models.py --self-test
+      - name: Explicit model setup (public pinned artifacts only)
+        run: boundary model-setup --destination checkpoints/privacy-filter
+      - name: Actual offline OPF and hybrid inference
+        env:
+          HF_HUB_OFFLINE: '1'
+          TRANSFORMERS_OFFLINE: '1'
+        run: python scripts/evaluate_models.py --checkpoint checkpoints/privacy-filter/original --output build/model-evaluation
+      - name: Retain text-free reports, including completed results on partial failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: synthetic-model-baselines-${{ github.sha }}
+          path: |
+            build/model-evaluation/opf-v0.1.json
+            build/model-evaluation/hybrid-v0.1.json
+          if-no-files-found: warn
+          retention-days: 30
+          include-hidden-files: false

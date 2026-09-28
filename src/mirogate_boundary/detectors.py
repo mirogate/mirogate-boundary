@@ -71,7 +71,9 @@ _PHONE_LABEL = re.compile(r"(?:\b(?:phone|telephone|tel|mobile|whatsapp)\b|(?:ر
 _ID_LABEL = re.compile(r"(?:\b(?:national[ _-]?id|emirates[ _-]?id|identity[ _-]?(?:number|no)|passport(?:[ _-]?(?:number|no))?|account[ _-]?(?:number|no)|customer[ _-]?id|ssn)\b|(?:رقم[ \t]+)?(?:الهوية|الاقامة|الإقامة|الحساب|البطاقة|الجواز|الرقم[ \t]+الوطني|رقم[ \t]+وطني))[\s\"']{0,4}[:=：]?[ \t\"']{0,4}(?P<value>[A-Za-z0-9][A-Za-z0-9 -]{3,27}[A-Za-z0-9])(?!\w)", re.I)
 _NAME_LABEL = re.compile(r"(?:\b(?:full[ _-]?name|customer[ _-]?name|patient[ _-]?name|contact[ _-]?name)\b|(?:الاسم[ \t]+الكامل|اسم[ \t]+(?:العميل|المريض|المستلم)))[\s\"']{0,4}[:=：][ \t\"']{0,4}(?P<value>[^\n\r,،;؛<>\"'=:\d]{2,100})", re.I)
 _ADDRESS_LABEL = re.compile(r"(?:\b(?:home[ _-]?address|shipping[ _-]?address|billing[ _-]?address|street[ _-]?address)\b|(?:عنوان[ \t]+(?:السكن|المنزل|الشحن|العميل)))[\s\"']{0,4}[:=：][ \t\"']{0,4}(?P<value>[^\n\r;؛<>\"']{4,180})", re.I)
-_SECRET_LABEL = re.compile(r"(?:\b(?:api[ _-]?key|access[ _-]?token|auth[ _-]?token|secret(?:[ _-]?key)?|password|passwd|client[ _-]?secret)\b|(?:كلمة[ \t]+(?:المرور|السر)|مفتاح[ \t]+(?:الواجهة|سري)))[\s\"']{0,4}[:=：][ \t\"']{0,4}(?P<value>[^\s\"',;؛<>}]{4,512})", re.I)
+_SECRET_PREFIX = r"(?:\b(?:api[ _-]?key|access[ _-]?token|auth[ _-]?token|secret(?:[ _-]?key)?|password|passwd|client[ _-]?secret)\b|(?:كلمة[ \t]+(?:المرور|السر)|مفتاح[ \t]+(?:الواجهة|سري)))[\s\"']{0,4}[:=：][ \t]{0,4}"
+_SECRET_LABEL = re.compile(_SECRET_PREFIX + r"(?P<value>[^\s\"',;؛<>}]{1,512})", re.I)
+_SECRET_QUOTED = re.compile(_SECRET_PREFIX + r"(?P<quote>[\"'])(?P<value>[^\r\n]{1,512}?)(?P=quote)", re.I)
 _SECRET_TOKENS = re.compile(r"(?<![\w-])(?:sk-(?:proj-|ant-)?[A-Za-z0-9_-]{16,}|(?:gh[pousr]_[A-Za-z0-9]{20,})|github_pat_[A-Za-z0-9_]{20,}|AKIA[A-Z0-9]{16}|xox[baprs]-[A-Za-z0-9-]{15,}|eyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,})(?![\w-])")
 _BEARER = re.compile(r"\bBearer[ \t]+(?P<value>[A-Za-z0-9._~+/-]{8,}=*)", re.I)
 _PRIVATE_KEY = re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH |DSA |ENCRYPTED )?PRIVATE KEY-----[\s\S]*?(?:-----END (?:RSA |EC |OPENSSH |DSA |ENCRYPTED )?PRIVATE KEY-----|\Z)")
@@ -133,6 +135,7 @@ class RuleDetector:
         add(_ADDRESS_LABEL, "private_address", "value")
         add(_SECRET_TOKENS, "secret")
         add(_SECRET_LABEL, "secret", "value")
+        add(_SECRET_QUOTED, "secret", "value")
         add(_BEARER, "secret", "value")
         add(_PRIVATE_KEY, "secret")
         add(_URL_CREDENTIALS, "secret", "value")

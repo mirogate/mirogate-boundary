@@ -1,10 +1,10 @@
 # Evaluation: measured results and limits
 
-The first rules-only run on Arabic Privacy Boundary Bench v0.1 demonstrates why a local policy layer must expose detector limitations. The rules recognized many structured contacts, but they left 625 of 1,756 annotated sensitive characters uncovered. This is a detection diagnostic, not a measurement of data actually sent over a network.
+The checked-in rules-only run on Arabic Privacy Boundary Bench v0.1 demonstrates why a local policy layer must expose detector limitations. The rules recognized many structured contacts, but they left 625 of 1,756 annotated sensitive characters uncovered. This is a detection diagnostic, not a measurement of data actually sent over a network.
 
 ## Rules-only development snapshot
 
-The checked-in [raw report](../benchmarks/results/rules-v0.1.json) was generated on 2026-09-28 using Python 3.13.14 on Windows 11. Corpus: 99 synthetic cases, 90 annotated entities, 81 sensitive cases and 18 negative controls. The corpus and detector source hashes are embedded in the report.
+The checked-in [raw report](../benchmarks/results/rules-v0.1.json) was generated on 2026-09-28 using the installed Mirogate Boundary 0.1.0 package and Python 3.13.14 on Windows 11. Corpus: 99 synthetic cases, 90 annotated entities, 81 sensitive cases and 18 negative controls. The corpus and detector source hashes are embedded in the report. This final rules run followed an independently identified short-secret rule correction; its detection counts match the earlier development run, and the corpus was not changed or used to tune that correction.
 
 | Metric | Measured result |
 | --- | ---: |
@@ -16,8 +16,8 @@ The checked-in [raw report](../benchmarks/results/rules-v0.1.json) was generated
 | Entirely uncovered entities | 34 / 90 |
 | Negative controls with false positives | 1 / 18 |
 | Unlabelled characters predicted sensitive | 40 / 2,297 (1.74%) |
-| Total detector time, one run | 20.442 ms |
-| Median / p95 short-case latency | 0.163 / 0.407 ms |
+| Total detector time, one run | 44.493 ms |
+| Median / p95 short-case latency | 0.250 / 1.406 ms |
 
 These timings are from one developer-machine run, excluding initialization. They do not establish production throughput, model latency, cold-start time, memory use or a performance advantage over another product. Reruns may differ. The JSON report is authoritative for this snapshot.
 
